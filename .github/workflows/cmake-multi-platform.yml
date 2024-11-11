@@ -13,26 +13,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Passo 1: FaÁa o checkout do cÛdigo do repositÛrio
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      # Passo 2: Instale dependÍncias
-      - name: Install dependencies
-        run: sudo apt-get update && sudo apt-get install -y cmake g++ 
-
-      # Passo 3: Baixar e instalar o Google Test
-=======
       # Passo 1: Fa√ßa o checkout do c√≥digo do reposit√≥rio
       - name: Checkout code
         uses: actions/checkout@v2
 
-      # Passo 2: Configure o C++ para compilar o c√≥digo
+      # Passo 2: Instale depend√™ncias
       - name: Install dependencies
         run: sudo apt-get update && sudo apt-get install -y cmake g++ 
 
-      # Passo 3: Baixar e configurar o Google Test
->>>>>>> 51706bf2bdb259c318e573cf7321a36fe2632703
+      # Passo 3: Baixar e instalar o Google Test
       - name: Setup Google Test
         run: |
           git clone https://github.com/google/googletest.git
@@ -40,7 +29,6 @@ jobs:
           cmake .. && make -j
           sudo make install
 
-<<<<<<< HEAD
       # Passo 4: Crie uma pasta de build e compile o projeto, incluindo os testes
       - name: Build the project and tests
         run: |
@@ -52,9 +40,4 @@ jobs:
       - name: Run tests
         run: |
           cd build
-          ./nome_do_executavel_de_testes  # Substitua pelo nome correto do execut·vel gerado
-=======
-      # Passo 5: Execute os testes
-      - name: Run tests
-        run: ./test.cpp
->>>>>>> 51706bf2bdb259c318e573cf7321a36fe2632703
+          ./teste.exe  # Substitua pelo nome correto do execut√°vel gerado
