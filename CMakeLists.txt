@@ -1,15 +1,15 @@
 cmake_minimum_required(VERSION 3.10)
-project(C214-Seminario)
+project(Tests)
 
 # Ativar o C++ padrão
 set(CMAKE_CXX_STANDARD 11)
 
-# Adicionar o Google Test
+# Encontre o Google Test
 find_package(GTest REQUIRED)
 include_directories(${GTEST_INCLUDE_DIRS})
 
-# Adicionar o executável de teste
-add_executable(test test.cpp)
+# Adicione o arquivo de teste e crie o executável
+add_executable(run_tests test.cpp)
 
-# Linkar o Google Test e o pthread com o executável
-target_link_libraries(test ${GTEST_LIBRARIES} pthread)
+# Linkar o Google Test e pthread com o executável de teste
+target_link_libraries(run_tests ${GTEST_LIBRARIES} pthread)
