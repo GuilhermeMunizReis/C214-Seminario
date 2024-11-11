@@ -4,12 +4,18 @@ project(Tests)
 # Ativar o C++ padrão
 set(CMAKE_CXX_STANDARD 11)
 
-# Encontre o Google Test
-find_package(GTest REQUIRED)
-include_directories(${GTEST_INCLUDE_DIRS})
+option(BUILD_TESTS "Build the tests" ON)
 
-# Adicione o arquivo de teste e crie o executável
-add_executable(run_tests test.cpp)
+# Configuração dos testes
+if(BUILD_TESTS)
+  # Encontre o Google Test
+  find_package(GTest REQUIRED)
+  include_directories(${GTEST_INCLUDE_DIRS})
 
-# Linkar o Google Test e pthread com o executável de teste
-target_link_libraries(run_tests ${GTEST_LIBRARIES} pthread)
+  # Adicione o arquivo de teste e crie o executável
+  add_executable(run_tests test.cpp)
+
+  # Linkar o Google Test e pthread com o executável de teste
+  target_link_libraries(run_tests ${GTEST_LIBRARIES} pthread)
+endif()
+
