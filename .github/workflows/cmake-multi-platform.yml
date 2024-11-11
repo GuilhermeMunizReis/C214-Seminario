@@ -13,7 +13,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-<<<<<<< HEAD
       # Passo 1: Faça o checkout do código do repositório
       - name: Checkout code
         uses: actions/checkout@v2
