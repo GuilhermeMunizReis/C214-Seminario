@@ -13,7 +13,7 @@ if(BUILD_TESTS)
   include_directories(${GTEST_INCLUDE_DIRS})
 
   # Adicione o executável de teste com todos os arquivos fonte necessários
-  add_executable(run_tests test.cpp character.h item.cpp)
+  add_executable(run_tests test.cpp character.h item.h)
 
   # Linkar o Google Test e pthread com o executável de teste
   target_link_libraries(run_tests ${GTEST_LIBRARIES} pthread)
