@@ -9,7 +9,7 @@ find_package(GTest REQUIRED)
 include_directories(${GTEST_INCLUDE_DIRS})
 
 # Adicionar o executável de teste
-add_executable(test.exe test.cpp)
+add_executable(test test.cpp)
 
 # Linkar o Google Test e o pthread com o executável
 target_link_libraries(test ${GTEST_LIBRARIES} pthread)
