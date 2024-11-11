@@ -31,4 +31,4 @@ jobs:
 
       # Passo 5: Execute os testes
       - name: Run tests
-        run: ./teste.cpp
+        run: ./test.cpp
