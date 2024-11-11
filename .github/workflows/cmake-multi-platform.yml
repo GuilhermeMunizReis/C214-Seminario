@@ -13,19 +13,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-<<<<<<< HEAD
       # Passo 1: Faça o checkout do código do repositório
       - name: Checkout code
         uses: actions/checkout@v2
 
       # Passo 2: Instale dependências
-=======
-      # Passo 1: FaÃ§a o checkout do cÃ³digo do repositÃ³rio
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      # Passo 2: Instale dependÃªncias
->>>>>>> 122c7057c0c3225685ca6b5d57c58ff078257678
       - name: Install dependencies
         run: sudo apt-get update && sudo apt-get install -y cmake g++ 
 
@@ -40,16 +32,11 @@ jobs:
       # Passo 4: Crie uma pasta de build e compile o projeto, incluindo os testes
       - name: Build the project and tests
         run: |
-          mkdir -p build && cd build
-          cmake ..  # Ajuste seu CMakeLists.txt para incluir o test.cpp
-          make -j
-
+            mkdir -p build && cd build
+            cmake test.cpp
+            make -j
       # Passo 5: Execute os testes
       - name: Run tests
         run: |
           cd build
-<<<<<<< HEAD
-          ./teste.exe  # Substitua pelo nome correto do executável gerado
-=======
-          ./teste.exe  # Substitua pelo nome correto do executÃ¡vel gerado
->>>>>>> 122c7057c0c3225685ca6b5d57c58ff078257678
+          ./teste    # Substitua pelo nome correto do executável gerado
