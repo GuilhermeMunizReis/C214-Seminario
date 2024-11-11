@@ -33,7 +33,7 @@ jobs:
       - name: Build the project and tests
         run: |
           mkdir -p build && cd build
-          cmake run_tests
+          cmake test.cpp
           make -j
 
 
