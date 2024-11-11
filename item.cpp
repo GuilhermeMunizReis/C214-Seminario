@@ -6,7 +6,7 @@ using namespace std;
 
 Item::Item(const string& name) : name(name) {}
 
-string Item::getName()
+const string& Item::getName()
 {
-	return string();
+	// TODO: inserir instrução return aqui
 }

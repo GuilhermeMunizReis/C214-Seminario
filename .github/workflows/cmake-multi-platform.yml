@@ -1,0 +1,44 @@
+name: C++ CI with Google Test
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Passo 1: Faça o checkout do código do repositório
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Passo 2: Instale dependências
+      - name: Install dependencies
+        run: sudo apt-get update && sudo apt-get install -y cmake g++ 
+
+      # Passo 3: Baixar e instalar o Google Test
+      - name: Setup Google Test
+        run: |
+          git clone https://github.com/google/googletest.git
+          mkdir -p googletest/build && cd googletest/build
+          cmake .. && make -j
+          sudo make install
+
+      # Passo 4: Crie uma pasta de build e compile o projeto, incluindo os testes
+      - name: Build the project and tests
+        run: |
+          mkdir -p build && cd build
+          cmake -DBUILD_TESTS=ON ..
+          make run_tests -j
+
+
+      # Passo 5: Execute os testes
+      - name: Run tests
+        run: |
+          cd build
+          ./run_tests  # Substitua pelo nome correto do executável gerado
