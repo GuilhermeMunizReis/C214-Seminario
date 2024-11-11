@@ -12,4 +12,4 @@ include_directories(${GTEST_INCLUDE_DIRS})
 add_executable(test.exe test.cpp)
 
 # Linkar o Google Test e o pthread com o executável
-target_link_libraries(test.exe ${GTEST_LIBRARIES} pthread)
+target_link_libraries(test ${GTEST_LIBRARIES} pthread)
