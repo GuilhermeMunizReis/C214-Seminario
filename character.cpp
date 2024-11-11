@@ -7,7 +7,7 @@ Character::Character(const string& name, int health) : name(name), health(health
 
 const string& Character::getName()
 {
-	return nome;
+	return name;
 }
 
 int Character::getHealth()  {

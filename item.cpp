@@ -8,5 +8,5 @@ Item::Item(const string& name) : name(name) {}
 
 const string& Item::getName()
 {
-	// TODO: inserir instrução return aqui
+	return name
 }
