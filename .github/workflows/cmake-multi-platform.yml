@@ -33,8 +33,9 @@ jobs:
       - name: Build the project and tests
         run: |
           mkdir -p build && cd build
-          cmake ..  # Ajuste seu CMakeLists.txt para incluir o test.cpp
+          cmake run_tests
           make -j
+
 
       # Passo 5: Execute os testes
       - name: Run tests
