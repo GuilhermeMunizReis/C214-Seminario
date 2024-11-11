@@ -41,4 +41,4 @@ jobs:
       - name: Run tests
         run: |
           cd build
-          ./teste  # Substitua pelo nome correto do executável gerado
+          ./run_tests  # Substitua pelo nome correto do executável gerado
