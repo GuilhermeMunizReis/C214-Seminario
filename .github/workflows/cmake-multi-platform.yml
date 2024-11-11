@@ -22,17 +22,6 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y cmake g++ 
 
       # Passo 3: Baixar e instalar o Google Test
-=======
-      # Passo 1: Faça o checkout do código do repositório
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      # Passo 2: Configure o C++ para compilar o código
-      - name: Install dependencies
-        run: sudo apt-get update && sudo apt-get install -y cmake g++ 
-
-      # Passo 3: Baixar e configurar o Google Test
->>>>>>> 51706bf2bdb259c318e573cf7321a36fe2632703
       - name: Setup Google Test
         run: |
           git clone https://github.com/google/googletest.git
@@ -40,7 +29,6 @@ jobs:
           cmake .. && make -j
           sudo make install
 
-<<<<<<< HEAD
       # Passo 4: Crie uma pasta de build e compile o projeto, incluindo os testes
       - name: Build the project and tests
         run: |
@@ -52,9 +40,4 @@ jobs:
       - name: Run tests
         run: |
           cd build
-          ./nome_do_executavel_de_testes  # Substitua pelo nome correto do execut�vel gerado
-=======
-      # Passo 5: Execute os testes
-      - name: Run tests
-        run: ./test.cpp
->>>>>>> 51706bf2bdb259c318e573cf7321a36fe2632703
+          ./teste.exe  # Substitua pelo nome correto do execut�vel gerado
