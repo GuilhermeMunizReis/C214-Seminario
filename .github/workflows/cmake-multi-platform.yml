@@ -29,13 +29,6 @@ jobs:
           cmake .. && make -j
           sudo make install
 
-      # Passo 4: Crie uma pasta de build e compile o projeto
-      - name: Build the project
-        run: |
-          mkdir -p build && cd build
-          cmake ..
-          make -j
-
       # Passo 5: Execute os testes
       - name: Run tests
         run: ./teste.cpp
