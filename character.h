@@ -18,4 +18,4 @@ private:
 };
 
 
-#endif CHARACTER_H
+#endif
