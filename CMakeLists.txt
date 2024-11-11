@@ -12,6 +12,9 @@ if(BUILD_TESTS)
   find_package(GTest REQUIRED)
   include_directories(${GTEST_INCLUDE_DIRS})
 
+  # Adicione o executável de teste com todos os arquivos fonte necessários
+  add_executable(run_tests character.h character.cpp item.cpp item.h)
+
   # Adicione o arquivo de teste e crie o executável
   add_executable(run_tests test.cpp)
 
