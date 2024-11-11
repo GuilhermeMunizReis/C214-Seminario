@@ -1,4 +1,3 @@
-#include <gtest/gtest.h>
 #include "pch.h"
 #include "item.h"
 #include "character.h"
