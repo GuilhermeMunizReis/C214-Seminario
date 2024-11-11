@@ -8,7 +8,7 @@ using namespace std;
 class Item { // Item nomes
 public:
     Item(const string& name);
-    string getName();
+    const string& getName();
 private:
     string name;
 };
