@@ -40,4 +40,4 @@ jobs:
       - name: Run tests
         run: |
           cd build
-          ./teste.exe  # Substitua pelo nome correto do executável gerado
+          ./teste  # Substitua pelo nome correto do executável gerado
