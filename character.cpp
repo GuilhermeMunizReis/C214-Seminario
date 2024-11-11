@@ -15,6 +15,6 @@ int Character::getHealth()  {
 }
 
 void Character::takeDamage(int damage) {
-	health -= damgage;
+	health -= damage;
 }
 
