@@ -13,11 +13,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+<<<<<<< HEAD
       # Passo 1: Faça o checkout do código do repositório
       - name: Checkout code
         uses: actions/checkout@v2
 
       # Passo 2: Instale dependências
+=======
+      # Passo 1: FaÃ§a o checkout do cÃ³digo do repositÃ³rio
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Passo 2: Instale dependÃªncias
+>>>>>>> c428409ecd7db0e3cf475ef0ae1fc3ab2e9fb50e
       - name: Install dependencies
         run: sudo apt-get update && sudo apt-get install -y cmake g++ 
 
@@ -39,4 +47,8 @@ jobs:
       - name: Run tests
         run: |
           cd build
+<<<<<<< HEAD
           ./teste    # Substitua pelo nome correto do executável gerado
+=======
+          ./teste  # Substitua pelo nome correto do executÃ¡vel gerado
+>>>>>>> c428409ecd7db0e3cf475ef0ae1fc3ab2e9fb50e

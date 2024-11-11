@@ -6,6 +6,7 @@ using namespace std;
 
 Item::Item(const string& name) : name(name) {}
 
-const string& Item::getName() const {
-	return name;
+string Item::getName()
+{
+	return string();
 }
